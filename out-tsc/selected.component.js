@@ -9,10 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Observable_1 = require('rxjs/Observable');
+var Subject_1 = require('rxjs/Subject');
 var SelectedComponent = (function () {
     function SelectedComponent() {
-        this.title = 'app works!';
     }
+    SelectedComponent.prototype.removeItem = function (item) {
+        this.storeSource.next((_a = {}, _a[item] = false, _a));
+        var _a;
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Subject_1.Subject)
+    ], SelectedComponent.prototype, "storeSource", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Observable_1.Observable)
+    ], SelectedComponent.prototype, "storeStream", void 0);
     SelectedComponent = __decorate([
         core_1.Component({
             selector: 'supre-selected',

@@ -12,9 +12,11 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 var common_1 = require('@angular/common');
-var repo_name_component_1 = require('./selected.component');
+var selected_component_1 = require('./selected.component');
+var object_pipe_1 = require('./object.pipe');
 var core_1 = require('@angular/core');
 __export(require('./selected.component'));
+__export(require('./object.pipe'));
 var SelectedModule = (function () {
     function SelectedModule() {
     }
@@ -24,13 +26,15 @@ var SelectedModule = (function () {
                 common_1.CommonModule,
             ],
             declarations: [
-                repo_name_component_1.SelectedComponent,
+                selected_component_1.SelectedComponent,
+                object_pipe_1.TruthyKeysPipe
             ],
             exports: [
-                repo_name_component_1.SelectedComponent,
+                selected_component_1.SelectedComponent,
+                object_pipe_1.TruthyKeysPipe
             ],
             entryComponents: [
-                repo_name_component_1.SelectedComponent,
+                selected_component_1.SelectedComponent,
             ]
         }), 
         __metadata('design:paramtypes', [])
