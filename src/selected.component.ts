@@ -13,7 +13,7 @@ export class SelectedComponent {
   @Input() storeStream: Observable<any>;
 
   removeItem(item) {
-    this.storeSource.next({[item]: false});
+    this.storeSource.next({type: 'REMOVE', index: item});
   }
 
 }

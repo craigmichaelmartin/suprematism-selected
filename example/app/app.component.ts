@@ -24,11 +24,26 @@ export class AppComponent implements OnInit {
       .scan((last = {}, current) =>
         (<any>Object).assign({}, last, current))
       .distinctUntilChanged((x, y) => JSON.stringify(x) === JSON.stringify(y));
+    this.storeStream = this.storeSource
+      .startWith({})
+      .scan((state = {}, action) => {
+        switch (action.type) {
+          case 'UPDATE':
+            return (Object as any).assign({}, state, action.object);
+          case 'ADD':
+            return (Object as any).assign({}, state, {[action.index]: true});
+          case 'REMOVE':
+            return (Object as any).assign({}, state, {[action.index]: false});
+          default:
+            return state;
+        }
+      })
+      .distinctUntilChanged((x, y) => JSON.stringify(x) === JSON.stringify(y));
   }
 
   pushRandomThing() {
     const thing = Math.random().toString(36).substr(2, 5);
-    this.storeSource.next({[thing]: true});
+    this.storeSource.next({type: 'ADD', index: thing});
   }
 
 }

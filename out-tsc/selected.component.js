@@ -15,8 +15,7 @@ var SelectedComponent = (function () {
     function SelectedComponent() {
     }
     SelectedComponent.prototype.removeItem = function (item) {
-        this.storeSource.next((_a = {}, _a[item] = false, _a));
-        var _a;
+        this.storeSource.next({ type: 'REMOVE', index: item });
     };
     __decorate([
         core_1.Input(), 
