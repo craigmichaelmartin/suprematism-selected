@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'supre-selected',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styles: [require('./selected.component.css')]
 })
 export class SelectedComponent {
-  title = 'app works!';
+
+  @Input() storeSource: Subject<any>;
+  @Input() storeStream: Observable<any>;
+
+  removeItem(item) {
+    this.storeSource.next({type: 'REMOVE', index: item});
+  }
+
 }

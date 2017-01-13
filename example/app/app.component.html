@@ -1,3 +1,5 @@
-<div style="padding-left:100px; padding-bottom: 200px">
-  <supre-selected></supre-selected>
-</div>
+<supre-selected
+  [storeSource]="storeSource"
+  [storeStream]="storeStream"
+></supre-selected>
+<button (click)="pushRandomThing()">Push Random Thing</button>
