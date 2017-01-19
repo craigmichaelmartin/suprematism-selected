@@ -1,21 +1,22 @@
 .Selected {
   width: 100%;
-  min-height: 36px;
-  background-color: lightblue;
+  min-height: 24px;
+  background-color: white;
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 4px;
-  padding-bottom: 2px; }
+  padding-bottom: 4px; }
 
 .Selected-item {
-  color: #444444;
+  color: #666665;
   display: inline-block;
   width: auto;
-  border: 1px solid gray;
-  background-color: #e4e4e4;
-  border-radius: 8px;
-  padding: 4px 8px;
-  margin: 4px 4px; }
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 2px 2px;
+  font-size: 12px; }
 
 .Selected-itemIcon {
   margin-left: 4px; }
