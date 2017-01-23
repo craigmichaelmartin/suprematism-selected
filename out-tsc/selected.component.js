@@ -14,8 +14,11 @@ var Subject_1 = require('rxjs/Subject');
 var SelectedComponent = (function () {
     function SelectedComponent() {
     }
+    SelectedComponent.prototype.ngOnInit = function () {
+        this.storeSource.next({ type: 'SET_SELECTED', key: this.key, newValue: [] });
+    };
     SelectedComponent.prototype.removeItem = function (item) {
-        this.storeSource.next({ type: 'REMOVE', index: item });
+        this.storeSource.next({ type: 'REMOVE_SELECTED', key: this.key, index: item });
     };
     __decorate([
         core_1.Input(), 
@@ -25,6 +28,10 @@ var SelectedComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', Observable_1.Observable)
     ], SelectedComponent.prototype, "storeStream", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SelectedComponent.prototype, "key", void 0);
     SelectedComponent = __decorate([
         core_1.Component({
             selector: 'supre-selected',
