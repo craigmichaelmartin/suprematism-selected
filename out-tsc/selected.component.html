@@ -1,5 +1,5 @@
 <div class="Selected">
-  <div class="Selected-item" *ngFor="let item of (storeStream | async | truthyKeys)">
+  <div class="Selected-item" *ngFor="let item of ((storeStream | async)[key])">
     {{item}}
     <span class="Selected-itemIcon ion-close" (click)="removeItem(item)"></span>
   </div>
