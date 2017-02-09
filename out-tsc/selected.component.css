@@ -8,15 +8,13 @@
   padding-bottom: 4px; }
 
 .Selected-item {
-  color: #666665;
   display: inline-block;
   width: auto;
   border: 1px solid #cccccc;
   background-color: white;
   border-radius: 4px;
-  padding: 2px 4px;
-  margin: 2px 2px;
-  font-size: 12px; }
+  padding: 1px 4px;
+  margin: 2px 2px; }
 
-.Selected-itemIcon {
-  margin-left: 4px; }
+.u-center-align {
+  text-align: center; }
