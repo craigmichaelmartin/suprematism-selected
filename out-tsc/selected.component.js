@@ -9,29 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Observable_1 = require('rxjs/Observable');
-var Subject_1 = require('rxjs/Subject');
 var SelectedComponent = (function () {
     function SelectedComponent() {
+        this.selectedRemoved = new core_1.EventEmitter();
     }
-    SelectedComponent.prototype.ngOnInit = function () {
-        this.storeSource.next({ type: 'SET_SELECTED', key: this.key, newValue: [] });
-    };
     SelectedComponent.prototype.removeItem = function (item) {
-        this.storeSource.next({ type: 'REMOVE_SELECTED', key: this.key, index: item });
+        this.selectedRemoved.next(item);
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Subject_1.Subject)
-    ], SelectedComponent.prototype, "storeSource", void 0);
+        __metadata('design:type', Array)
+    ], SelectedComponent.prototype, "selected", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Observable_1.Observable)
-    ], SelectedComponent.prototype, "storeStream", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], SelectedComponent.prototype, "key", void 0);
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], SelectedComponent.prototype, "selectedRemoved", void 0);
     SelectedComponent = __decorate([
         core_1.Component({
             selector: 'supre-selected',
