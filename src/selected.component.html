@@ -1,6 +1,11 @@
 <div class="Selected">
-  <div class="Selected-item" *ngFor="let item of selected">
-    {{item}}
-    <span class="Selected-itemIcon u-supre-icon u-supre-icon--delete-x" (click)="removeItem(item)"></span>
+  <div *ngIf="selected.length">
+    <div class="Selected-item color-mid-gray u-type-s" *ngFor="let item of selected">
+      {{item}}
+      <span class="Selected-itemIcon u-supre-icon u-supre-icon--delete-x _mlxs" (click)="removeItem(item)"></span>
+    </div>
+  </div>
+  <div *ngIf="!selected.length" class="u-type-s color-mid-gray u-center-align _ptxs">
+    You have not selected any attributes yet
   </div>
 </div>

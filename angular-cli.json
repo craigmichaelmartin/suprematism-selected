@@ -15,7 +15,8 @@
       "prefix": "supre",
       "mobile": false,
       "styles": [
-        "../node_modules/suprematism-font-icons/style.css"
+        "../node_modules/suprematism-font-icons/style.css",
+        "../node_modules/suprematism-style-guide/dist/suprematism.css"
       ],
       "scripts": [],
       "environments": {
