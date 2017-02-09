@@ -1,6 +1,7 @@
 # Suprematism Selected
 
-An Angular 2 selected component.
+An Angular presentational component using uni-directional data flow for displaying
+a selected pane of values.
 
 
 #### Installation
@@ -23,21 +24,18 @@ we must manually run the publish prehook and save the files.
 - [`supre-selected`](#supre-selected)
 
 #### <a id="supre-selected"></a> `supre-selected`
-A component for a selected.
 
 ##### Directives
-- Any Directives?
+- `selected: Array<string>` - An array of the selected options as strings (must be unique).
 
 ##### Events
-- Any Events
-
-
-## States
-- The selected component has these states:
+- `selectedRemoved: string` - The option from the selected pane that was removed.
 
 
 ## Example
 ```html
-<supre-selected>
-</supre-selected>
+<supre-selected
+  [selected]="arrayOfSelectedOptions"
+  (selectedRemoved)="updateArrayOfSelectedOptionsToFilterOutOption($event)"
+></supre-selected>
 ```

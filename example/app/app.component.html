@@ -1,6 +1,5 @@
 <supre-selected
-  [storeSource]="storeSource"
-  [storeStream]="storeStream"
-  [key]="key"
+  [selected]="selected"
+  (selectedRemoved)="removeSelected($event)"
 ></supre-selected>
 <button (click)="pushRandomThing()">Push Random Thing</button>
