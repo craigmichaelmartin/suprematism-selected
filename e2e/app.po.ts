@@ -1,7 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class SuprematismSelectedPage {
-
+export class SuprematismSelectedUpdatePage {
   navigateTo() {
     return browser.get('/');
   }

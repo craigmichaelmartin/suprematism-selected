@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'supre-selected',
-  template: require('./selected.component.html'),
-  styles: [require('./selected.component.css')]
+  templateUrl: './selected.component.html',
+  styleUrls: ['./selected.component.scss']
 })
 export class SelectedComponent {
 
