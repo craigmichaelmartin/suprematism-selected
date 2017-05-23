@@ -1,5 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+export interface Item {
+  id: string|number;
+  name: string;
+  isNonFactor?: boolean;
+}
+
 @Component({
   selector: 'supre-selected',
   templateUrl: './selected.component.html',
@@ -7,11 +13,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SelectedComponent {
 
-  @Input() selected: Array<string>;
+  @Input() items: Array<Item>;
   @Output() selectedRemoved = new EventEmitter();
 
-  removeItem(item) {
-    this.selectedRemoved.next(item);
+  removeItem(itemId) {
+    this.selectedRemoved.next(itemId);
   }
 
 }

@@ -1,11 +1,12 @@
 <div class="Selected">
-  <div *ngIf="selected.length">
-    <div class="Selected-item color-mid-gray u-type-s" *ngFor="let item of selected">
-      {{item}}
-      <span class="Selected-itemIcon u-supre-icon u-supre-icon--delete-x _mlxs" (click)="removeItem(item)"></span>
+  <div *ngIf="items.length">
+    <div class="Selected-item color-mid-gray u-type-s" *ngFor="let item of items" [ngClass]="{'is-nonFactor': !!item.isNonFactor}">
+      <span class="Selected-copy">{{item.name}}</span>
+      <span *ngIf="!!item.isNonFactor" class="Selected-icon Selected-icon--nonFactor u-supre-icon u-supre-icon--hide _mlxs"></span>
+      <span class="Selected-icon u-supre-icon u-supre-icon--delete-x _mlxs" (click)="removeItem(item.id)"></span>
     </div>
   </div>
-  <div *ngIf="!selected.length" class="u-type-s color-mid-gray u-center-align _ptxs">
+  <div *ngIf="!items.length" class="u-type-s color-mid-gray u-center-align _ptxs">
     You have not selected any attributes yet
   </div>
 </div>
