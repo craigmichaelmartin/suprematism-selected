@@ -7,21 +7,9 @@ export * from './selected.component';
 export * from './object.pipe';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
-    declarations: [
-        SelectedComponent,
-        TruthyKeysPipe
-    ],
-    exports: [
-        SelectedComponent,
-        TruthyKeysPipe
-    ],
-    entryComponents: [
-        SelectedComponent,
-    ]
+  imports: [CommonModule],
+  declarations: [SelectedComponent, TruthyKeysPipe],
+  exports: [SelectedComponent, TruthyKeysPipe],
+  entryComponents: [SelectedComponent]
 })
-export class SelectedModule {
-
-}
+export class SelectedModule {}

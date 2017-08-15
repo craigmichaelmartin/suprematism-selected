@@ -14,7 +14,6 @@ declare var require: any;
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-
   selected = [];
 
   pushRandomThing() {
@@ -25,5 +24,4 @@ export class AppComponent {
   removeSelected(thing) {
     this.selected = this.selected.filter(x => x !== thing);
   }
-
 }
