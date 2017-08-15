@@ -1,5 +1,7 @@
 # Suprematism Selected
 
+[![Build Status][travis-badge]][travis-badge-url]
+
 An Angular presentational component using uni-directional data flow for displaying
 a selected pane of values.
 
@@ -39,3 +41,6 @@ we must manually run the publish prehook and save the files.
   (selectedRemoved)="updateArrayOfSelectedOptionsToFilterOutOption($event)"
 ></supre-selected>
 ```
+
+[travis-badge]: https://travis-ci.org/CINBCUniversal/suprematism-selected.svg?branch=master
+[travis-badge-url]: https://travis-ci.org/CINBCUniversal/suprematism-selected
