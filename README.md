@@ -1,5 +1,7 @@
 # Suprematism Selected
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/CINBCUniversal/suprematism-selected.svg)](https://greenkeeper.io/)
+
 [![Build Status][travis-badge]][travis-badge-url]
 
 An Angular presentational component using uni-directional data flow for displaying
